@@ -1,0 +1,27 @@
+@import 'variables';
+
+.nav-bar {
+  height: $header-height;
+  background: $header-background;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width:100%;
+
+  .title {
+    margin: auto;
+    color: $header-title-color;
+    font-size: $font-large;
+    justify-content: center;
+    align-self: center;
+  }
+
+  .menu,
+  .profile {
+    height: $header-height - 1rem;
+    margin: .5rem;
+    width: $header-height;
+    background: yellow;
+  }
+}
+

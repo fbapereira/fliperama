@@ -1,0 +1,10 @@
+<div class="nav-bar">
+    <i class="nav-bar-item menu  button button--download" (click)="changeLateralMenuStatus()">
+    </i>
+    <span class="nav-bar-item title">
+        Fliperama
+    </span>
+    <i class="nav-bar-item profile">
+    </i>
+</div>
+<app-lateral-menu [categories]="categories$ | async" #lateralMenu></app-lateral-menu>

@@ -1,0 +1,23 @@
+@import 'variables';
+
+@for $i from 1 through length($lateral-menu-colors) {
+  .square-#{$i} {
+    background: nth($lateral-menu-colors, $i);
+    width: 15rem;
+    height: $item-height;
+    line-height: $item-height;
+    vertical-align: middle;
+    color: whitesmoke;
+    text-align: center;
+    cursor: pointer;
+  }
+}
+
+.scene {
+  position: fixed;
+  left: 0;
+  top: $item-height;
+  z-index: 999;
+  overflow: scroll;
+  height: 100%;
+}
