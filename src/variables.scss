@@ -1,6 +1,9 @@
 $primary: #965E98;
 $primary-contrast: #F4C258;
 
+$black: #000;
+$white: #fff;
+
 /*
     Lateral menu
 */
@@ -16,8 +19,8 @@ $font-large: 2rem;
     Header
 */
 $header-height: 3rem;
-$header-background: $primary;
-$header-title-color: $primary-contrast;
+$header-background: rgba(#000, .4);;
+$header-title-color: $white;
 $header-title-size: $font-large;
 
 
