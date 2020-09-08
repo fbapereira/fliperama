@@ -1,13 +1,12 @@
 .banner {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: inherit;
-    display: flex;
-    align-items: center;
-    background-image: url("/assets/images/banner.jpg");
-    background: url("/assets/images/banner.jpg");
-    height: 50vh;
-    clip-path: polygon(100% 0%, 100% 30vh, 0% 40vh, 0% 0%);
-  }
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: inherit;
+  display: flex;
+  align-items: center;
+  background-image: url("/assets/images/banner.jpg");
+  height: 40vh;
+  clip-path: polygon(100% 0%, 100% 30vh, 0% 40vh, 0% 0%);
+}

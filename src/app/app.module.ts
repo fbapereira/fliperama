@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { MenuModule } from './menu/menu.module';
 import { HomeModule } from './home/home.module';
 import {SharedModule } from './shared/shared.module';
+import {GameModule} from './game/game.module'
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import {SharedModule } from './shared/shared.module';
     BrowserAnimationsModule,
     MenuModule,
     HomeModule,
+    GameModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

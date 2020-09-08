@@ -1,0 +1,26 @@
+@import 'variables';
+  $card-shadow: 0px 10px 35px 0px rgba(0, 0, 0, .2);
+
+  .card {
+    box-shadow: $card-shadow;
+    overflow: hidden;
+    background: $primary;
+    border-color: $white;
+
+
+    &-button {
+      background-color: $primary;
+      color: $white;
+      display: block;
+      width: 100%;
+      text-align: center;
+      height: 3rem;
+      line-height: 3rem;
+      text-decoration:none
+    }
+
+    img {
+      object-fit: cover;
+      width: 100%;
+    }
+  }
