@@ -5,7 +5,7 @@ import { map } from 'rxjs/operators';
 import { MainService } from './main.service';
 
 export interface Category {
-  id: number,
+  id: string,
   title: string,
 }
 
