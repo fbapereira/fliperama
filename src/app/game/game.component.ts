@@ -22,5 +22,8 @@ export class GameComponent {
     }),
   );
 
-  constructor(private activatedRoute: ActivatedRoute, private gameService: GamesService) { }
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private gameService: GamesService
+  ) { }
 }

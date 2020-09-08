@@ -11,5 +11,7 @@ export class CategoryComponent {
 
   id$ = this.activatedRoute.queryParams.pipe(map((params) => [params['category']]));
 
-  constructor(private activatedRoute: ActivatedRoute) { }
+  constructor(
+    private activatedRoute: ActivatedRoute,
+  ) { }
 }

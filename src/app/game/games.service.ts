@@ -19,7 +19,9 @@ export class Game {
 export class GamesService {
   games$: Observable<Game[]> = this.mainService.data$.pipe(map((games) => games as Game[]));
 
-  constructor(private mainService: MainService) { }
+  constructor(
+    private mainService: MainService
+  ) { }
 
   getGamesByCategory(category: Category): Observable<Game[]> {
     return this.mainService.data$.pipe(

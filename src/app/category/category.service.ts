@@ -24,7 +24,9 @@ export class CategoryService {
     }),
   );
 
-  constructor(private mainService: MainService) { }
+  constructor(
+    private mainService: MainService
+  ) { }
 
   getCategory(id: string): Observable<Category> {
     return this.categories$.pipe(

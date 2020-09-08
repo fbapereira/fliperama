@@ -8,8 +8,14 @@ import { CategoryListComponent } from './category-list/category-list.component';
 import { CategoryComponent } from './category.component';
 
 @NgModule({
-  declarations: [CategoryComponent, CategoryListComponent],
-  exports: [CategoryComponent, CategoryListComponent],
+  declarations: [
+    CategoryComponent,
+    CategoryListComponent,
+  ],
+  exports: [
+    CategoryComponent,
+    CategoryListComponent,
+  ],
   imports: [
     CommonModule,
     GameModule,

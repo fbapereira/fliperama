@@ -32,7 +32,8 @@
             ],
             "stylePreprocessorOptions": {
               "includePaths": [
-                "./src"
+                "./src",
+                "./src/assets"
               ]
             },
             "scripts": []
@@ -96,6 +97,12 @@
               "src/assets",
               "src/favicon.ico"
             ],
+             "stylePreprocessorOptions": {
+              "includePaths": [
+                "./src",
+                "./src/assets"
+              ]
+            },
             "styles": [
               "src/styles.scss"
             ],

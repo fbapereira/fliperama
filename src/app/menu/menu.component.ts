@@ -17,7 +17,9 @@ export class MenuComponent {
 
   categories$ = this.categoryService.categories$;
 
-  constructor(private categoryService: CategoryService) { }
+  constructor(
+    private categoryService: CategoryService
+  ) { }
 
   /**
 

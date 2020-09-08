@@ -24,9 +24,12 @@ export class SearchComponent implements AfterViewInit {
   selectedCategories = [];
 
 
-    constructor(private gamesService: GamesService, private categoryService: CategoryService) { }
+  constructor(
+    private gamesService: GamesService,
+    private categoryService: CategoryService
+  ) { }
+
   ngAfterViewInit(): void {
-  
     this.searchText$ = fromEvent<any>(this.input.nativeElement, 'keyup')
       .pipe(
         map(event => event.target.value),
@@ -42,7 +45,6 @@ export class SearchComponent implements AfterViewInit {
         this.searchText$
       ]).pipe(
         map(([selectedCategories, games, searchText]) => {
-          debugger;
           let selectedGames = games;
 
           if (!!searchText) {
@@ -58,7 +60,6 @@ export class SearchComponent implements AfterViewInit {
 
           return selectedGames;
         }),
-    
           // return  games.filter((x) => categories.length === 0 || categories.includes(x.categories[0]))
       );
   }

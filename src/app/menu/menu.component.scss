@@ -13,14 +13,6 @@
   left: 0;
   z-index: 100;
 
-  .title {
-    margin: auto;
-    color: $header-title-color;
-    font-size: $font-large;
-    justify-content: center;
-    align-self: center;
-  }
-
   .menu,
   .profile {
     font-size: $header-height - 1rem;

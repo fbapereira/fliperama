@@ -10,28 +10,40 @@ import { CategoryService, Category } from '../category.service';
   styleUrls: ['./category-list.component.scss']
 })
 export class CategoryListComponent implements OnChanges {
+  /**
+   * Array of categories id.
+   */
   @Input()
-  showCategories: string[];
+  showCategories: string[] = [];
 
+  /**
+   * limit of games to display. 0 for no limit
+   */
   @Input()
   limit: number = 0;
 
+  /**
+   * information to display
+   */
   lobbyData = [];
 
-  constructor(private gamesService: GamesService, private categoryService: CategoryService) { }
+  constructor(
+    private gamesService: GamesService,
+    private categoryService: CategoryService
+  ) { }
 
   ngOnChanges() {
     this.lobbyData = [];
+
     this.showCategories.forEach((categoryId: string) => {
+      // for each category id, push an observable to get the data and display in the screen
       this.lobbyData.push(
         this.categoryService.getCategory(categoryId).pipe(
-          switchMap((category: Category) => {
-            return this.gamesService.getGamesByCategory(category).pipe(
+          switchMap((category: Category) => this.gamesService.getGamesByCategory(category).pipe(
               map((game: Game[]) => {
                 return { category, games: this.limit === 0 ? game : game.slice(0, this.limit) };
               }),
-            )
-          }),
+          )),
       ));
     });
   }

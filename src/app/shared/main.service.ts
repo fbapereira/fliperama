@@ -6,6 +6,7 @@ import { data } from './main.data';
 @Injectable({
   providedIn: 'root'
 })
+
 export class MainService {
   data$ = of(data);
 }
