@@ -1,4 +1,10 @@
-<div class="banner">
-    <ng-content></ng-content>
-</div>
-<app-game-lobby [games]="games$ | async"></app-game-lobby>
+<div class="banner top"></div>
+<ng-container *ngFor="let lobbyData$ of lobbyData">
+  <div class="home-lobby" *ngIf="lobbyData$ | async as lobbyData">
+    <span class="title">{{lobbyData.category.title}}
+      <a class="link" href="">see more</a>
+    </span>
+    <app-game-lobby [games]="lobbyData.games"></app-game-lobby>
+  </div>
+</ng-container>
+<div class="banner bottom"></div>

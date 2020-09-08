@@ -1,3 +1,5 @@
+@import 'variables';
+
 .banner {
   background-attachment: fixed;
   background-position: center;
@@ -8,5 +10,29 @@
   align-items: center;
   background-image: url("/assets/images/banner.jpg");
   height: 40vh;
-  clip-path: polygon(100% 0%, 100% 30vh, 0% 40vh, 0% 0%);
+
+  &.top {
+    clip-path: polygon(100% 0%, 100% 30vh, 0% 40vh, 0% 0%);
+  }
+
+  &.bottom {
+    clip-path: polygon(100% 0%, 100% 40vh, 0% 100%, 0% 15vh);
+  }
+}
+
+.home-lobby {
+  width: 90%;
+  margin: 2rem auto;
+
+
+  .title {
+    color: $primary;
+    font-size: $font-large;
+    margin-bottom: 1rem;
+
+    .link {
+      font-size: $font-small;
+
+    }
+  }
 }

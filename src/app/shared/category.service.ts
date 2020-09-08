@@ -25,4 +25,10 @@ export class CategoryService {
   );
 
   constructor(private mainService: MainService) { }
+
+  getCategory(id: string): Observable<Category> {
+    return this.categories$.pipe(
+      map((categories) => categories.find((category) => category.id === id)),
+    )
+  }
 }
