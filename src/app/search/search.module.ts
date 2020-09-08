@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SearchComponent } from './search.component';
+import { RouterModule } from '@angular/router';
+import { GameModule } from '../game/game.module';
 
 
 
@@ -8,7 +10,10 @@ import { SearchComponent } from './search.component';
   declarations: [SearchComponent],
   exports: [SearchComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule,
+    GameModule,
+    
   ]
 })
 export class SearchModule { }

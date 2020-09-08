@@ -11,7 +11,6 @@ import { CategoryModule } from '../category/category.module';
     CommonModule,
     GameModule,
     CategoryModule,
-
   ],
   exports: [HomeComponent]
 })

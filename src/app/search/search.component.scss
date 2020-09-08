@@ -1,0 +1,70 @@
+@import 'variables';
+
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.category {
+  background-color: #ddd;
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+}
+
+@for $i from 1 through length($lateral-menu-colors) {
+    .category-#{$i} {
+      background: nth($lateral-menu-colors, $i);
+      vertical-align: middle;
+      padding: 10px 20px;
+      color: whitesmoke;
+      text-align: center;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      margin: .5rem;
+      cursor: pointer;
+
+      &.selected {
+        background: darken(nth($lateral-menu-colors, $i), 40%);
+        .close {
+          margin-left: .5rem;
+          display: inherit;
+        }
+      }
+
+      .close {
+        display: none;
+      }
+    }
+  }
+
+
+.banner {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: inherit;
+    display: flex;
+    align-items: center;
+    background-image: url("/assets/images/banner.jpg");
+    height: 20vh;
+}

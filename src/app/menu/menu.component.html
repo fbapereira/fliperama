@@ -3,6 +3,6 @@
     <span class="nav-bar-item title">
         Fliperama
     </span>
-    <span class="nav-bar-item menu material-icons">search</span>
+    <span class="nav-bar-item menu material-icons" [routerLink]="['/search']" >search</span>
 </div>
 <app-lateral-menu [categories]="categories$ | async" #lateralMenu></app-lateral-menu>
