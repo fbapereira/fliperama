@@ -4,12 +4,12 @@
   .card {
     box-shadow: $card-shadow;
     overflow: hidden;
-    background: $primary;
+    background: #251533;
     border-color: $white;
 
 
     &-button {
-      background-color: $primary;
+      background-color: #251533;
       color: $white;
       display: block;
       width: 100%;

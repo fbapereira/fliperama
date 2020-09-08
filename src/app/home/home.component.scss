@@ -1,3 +1,4 @@
+@import 'keyframes';
 @import 'variables';
 
 .banner {
@@ -9,13 +10,55 @@
   display: flex;
   align-items: center;
   background-image: url("/assets/images/banner.jpg");
-  height: 40vh;
+  height: 30vh;
 
-  &.top {
-    clip-path: polygon(100% 0%, 100% 30vh, 0% 40vh, 0% 0%);
-  }
+  // &.top {
+  //   clip-path: polygon(100% 0%, 100% 30vh, 0% 40vh, 0% 0%);
+  // }
 
   &.bottom {
     clip-path: polygon(100% 0%, 100% 40vh, 0% 100%, 0% 15vh);
+  }
+
+  .home-banner-content{
+    width: 60%;
+    margin: auto;
+  
+    h1,
+    h2,
+    p {
+      color: white;
+      text-align: center;
+      text-shadow: 2px 2px $black;
+    }
+  }
+
+
+  
+  .sign {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: radial-gradient(
+      ellipse 50% 35% at 50% 50%,
+      #6b1839,
+      transparent
+    );
+    font-family: "Clip";
+    text-transform: uppercase;
+    font-size: 6em;
+    color: #ffe6ff;
+    text-shadow: 0 0 0.6rem lighten($primary, 0), 0 0 1.5rem lighten($primary, 20),
+      -0.2rem 0.1rem 1rem lighten($primary, 40), 0.2rem 0.1rem 1rem lighten($primary,60),
+      0 -0.5rem 2rem lighten($primary, 80), 0 0.5rem 3rem $primary;
+    animation: shine 2s forwards, flicker 3s infinite;
+  }
+
+  .flicker {
+    animation: shine 2s forwards, blink 3s 2s infinite;
+  }
+
+  .fast-flicker {
+    animation: shine 2s forwards, blink 10s 1s infinite;
   }
 }

@@ -10,13 +10,13 @@
   
   
     .title {
-      color: $primary;
+      color: $white;
       font-size: $font-large;
       margin-bottom: 1rem;
   
       .link {
         font-size: $font-small;
-  
+        color: $primary-contrast;
       }
     }
   }
