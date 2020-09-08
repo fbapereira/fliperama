@@ -1,24 +1,22 @@
 .lobby {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
+  justify-content: space-between;
 
   app-game-thumb {
-    width: 21%;
+    width: 19%;
+    margin-top: 1rem;
   }
 
   @media screen and (max-width: 992px) {
     app-game-thumb {
       width: 40%;
-      margin-top: 1rem;
     }
   }
 
   @media screen and (max-width: 600px) {
     app-game-thumb {
       width: 70%;
-      margin-top: 1rem;
     }
   }
 }

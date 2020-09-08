@@ -8,7 +8,7 @@ import { MenuModule } from './menu/menu.module';
 import { HomeModule } from './home/home.module';
 import {SharedModule } from './shared/shared.module';
 import {GameModule} from './game/game.module'
-import { SearchModule } from './search/search.module'
+import { SearchModule } from './search/search.module';
 
 @NgModule({
   declarations: [

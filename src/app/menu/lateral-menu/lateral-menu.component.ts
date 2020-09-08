@@ -2,6 +2,8 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 import { Component, Input } from '@angular/core';
 
 import { Category } from '../../shared/category.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-lateral-menu',
@@ -31,6 +33,7 @@ export class LateralMenuComponent {
    */
    state = 'hide';
 
+   constructor(private router: Router) {}
    /**
     * navigate to category
     * @param category target category
@@ -42,11 +45,11 @@ export class LateralMenuComponent {
        return;
      }
  
-    //  if (category) {
-    //    this.router.navigate(['/category'], { queryParams: { category: category.slug } });
-    //  } else {
-    //    this.router.navigate(['/']);
-    //  }
+     if (category) {
+       this.router.navigate(['/category'], { queryParams: { category: category.id } });
+     } else {
+       this.router.navigate(['/']);
+     }
      this.changeMenuStatus();
    }
 

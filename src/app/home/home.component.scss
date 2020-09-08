@@ -19,20 +19,3 @@
     clip-path: polygon(100% 0%, 100% 40vh, 0% 100%, 0% 15vh);
   }
 }
-
-.home-lobby {
-  width: 90%;
-  margin: 2rem auto;
-
-
-  .title {
-    color: $primary;
-    font-size: $font-large;
-    margin-bottom: 1rem;
-
-    .link {
-      font-size: $font-small;
-
-    }
-  }
-}

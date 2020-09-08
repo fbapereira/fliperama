@@ -1,0 +1,8 @@
+    <ng-container *ngFor="let lobbyData$ of lobbyData">
+    <div class="home-lobby" *ngIf="lobbyData$ | async as lobbyData">
+      <span class="title">{{lobbyData.category.title}}
+        <a class="link" [routerLink]="['/category']" [queryParams]="{category: lobbyData.category.id}">see more</a>
+      </span>
+      <app-game-lobby [games]="lobbyData.games"></app-game-lobby>
+    </div>
+  </ng-container>

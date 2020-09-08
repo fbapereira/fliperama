@@ -20,6 +20,7 @@ export class MenuComponent {
   constructor(private categoryService: CategoryService) { }
 
   /**
+
    * change the menu's status OPEN/CLOSE
    */
   changeLateralMenuStatus(): void {
