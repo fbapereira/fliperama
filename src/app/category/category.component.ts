@@ -8,11 +8,8 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./category.component.scss']
 })
 export class CategoryComponent {
-  id$ = this.activatedRoute.queryParams.pipe(
-    map((params) => [params['category']])
-  );
 
-  constructor(private activatedRoute: ActivatedRoute) {}
+  id$ = this.activatedRoute.queryParams.pipe(map((params) => [params['category']]));
 
-
+  constructor(private activatedRoute: ActivatedRoute) { }
 }

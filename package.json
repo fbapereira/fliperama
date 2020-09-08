@@ -21,6 +21,7 @@
     "@angular/router": "~10.0.14",
     "rxjs": "~6.5.5",
     "rxjs-tslint": "^0.1.8",
+    "sass-lint": "^1.13.1",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"
   },

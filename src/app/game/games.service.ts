@@ -6,6 +6,7 @@ import { Category } from '../category/category.service';
 import { MainService } from '../shared/main.service';
 
 export class Game {
+  id: string;
   categories: string[];
   name: string;
   background: string;

@@ -1,8 +1,8 @@
 @import 'variables';
-  $card-shadow: 0px 10px 35px 0px rgba(0, 0, 0, .2);
+  $thumb-shadow: 0px 10px 35px 0px rgba(0, 0, 0, .2);
 
-  .card {
-    box-shadow: $card-shadow;
+  .thumb {
+    box-shadow: $thumb-shadow;
     overflow: hidden;
     background: #251533;
     border-color: $white;

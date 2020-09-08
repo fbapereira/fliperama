@@ -1,0 +1,5 @@
+<div
+  *ngIf="game$ | async as game"
+  [ngStyle]="{ 'background-image': 'url(' + game.background + ')' }"
+  class="game">
+</div>
