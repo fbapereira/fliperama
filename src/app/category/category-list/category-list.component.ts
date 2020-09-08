@@ -1,14 +1,15 @@
-import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, Input, OnChanges } from '@angular/core';
 import { switchMap, map } from 'rxjs/operators';
-import { CategoryService, Category } from 'src/app/shared/category.service';
 import { GamesService, Game } from 'src/app/game/games.service';
+
+import { CategoryService, Category } from '../category.service';
 
 @Component({
   selector: 'app-category-list',
   templateUrl: './category-list.component.html',
   styleUrls: ['./category-list.component.scss']
 })
-export class CategoryListComponent implements OnChanges {  
+export class CategoryListComponent implements OnChanges {
   @Input()
   showCategories: string[];
 

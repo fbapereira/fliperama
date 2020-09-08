@@ -1,17 +1,18 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+
+import { CategoryModule } from '../category/category.module';
+import { GameModule } from '../game/game.module';
 
 import { HomeComponent } from './home.component';
-import { GameModule } from '../game/game.module';
-import { CategoryModule } from '../category/category.module';
 
 @NgModule({
-  declarations: [HomeComponent],
+  declarations: [ HomeComponent ],
   imports: [
     CommonModule,
     GameModule,
     CategoryModule,
   ],
-  exports: [HomeComponent]
+  exports: [ HomeComponent ]
 })
 export class HomeModule { }

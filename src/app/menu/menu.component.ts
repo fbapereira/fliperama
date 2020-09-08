@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 
-import { CategoryService } from '../shared/category.service';
+import { CategoryService } from '../category/category.service';
 
 import { LateralMenuComponent } from './lateral-menu/lateral-menu.component';
 

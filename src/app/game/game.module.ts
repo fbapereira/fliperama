@@ -1,16 +1,16 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { GameThumbComponent } from './game-thumb/game-thumb.component';
-import { GameLobbyComponent } from './game-lobby/game-lobby.component';
-import { GamesService } from './games.service';
+import { NgModule } from '@angular/core';
+
 import { SharedModule } from '../shared/shared.module';
 
-
+import { GameLobbyComponent } from './game-lobby/game-lobby.component';
+import { GameThumbComponent } from './game-thumb/game-thumb.component';
+import { GamesService } from './games.service';
 
 @NgModule({
   declarations: [GameThumbComponent, GameLobbyComponent],
   imports: [
-    CommonModule, 
+    CommonModule,
     SharedModule,
   ],
   exports: [GameThumbComponent, GameLobbyComponent],

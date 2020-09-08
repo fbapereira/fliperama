@@ -1,8 +1,9 @@
-import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
-import { GamesService, Game } from '../game/games.service';
-import { CategoryService, Category } from '../shared/category.service';
+import { Component, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import { combineLatest, fromEvent, Observable, BehaviorSubject } from 'rxjs';
 import { map, startWith, debounceTime, distinctUntilChanged } from 'rxjs/operators';
-import { Subject, combineLatest, fromEvent, Observable, BehaviorSubject } from 'rxjs';
+
+import { CategoryService, Category } from '../category/category.service';
+import { GamesService, Game } from '../game/games.service';
 
 @Component({
   selector: 'app-search',
@@ -15,8 +16,8 @@ export class SearchComponent implements AfterViewInit {
   input: ElementRef;
 
   searchText$: Observable<any>;
-
   games$: Observable<Game[]>
+
   public selectedCategoriesChanged = new BehaviorSubject<string[]>([]);
 
   categories$ = this.categoryService.categories$;

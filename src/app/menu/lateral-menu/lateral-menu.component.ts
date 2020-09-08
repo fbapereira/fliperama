@@ -1,9 +1,8 @@
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { Component, Input } from '@angular/core';
-
-import { Category } from '../../shared/category.service';
 import { Router } from '@angular/router';
 
+import { Category } from '../../category/category.service';
 
 @Component({
   selector: 'app-lateral-menu',
@@ -44,12 +43,13 @@ export class LateralMenuComponent {
        this.changeMenuStatus();
        return;
      }
- 
+
      if (category) {
        this.router.navigate(['/category'], { queryParams: { category: category.id } });
      } else {
        this.router.navigate(['/']);
      }
+
      this.changeMenuStatus();
    }
 

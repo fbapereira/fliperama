@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+
 import { Game } from '../games.service';
 
 @Component({
@@ -8,5 +9,4 @@ import { Game } from '../games.service';
 })
 export class GameLobbyComponent {
   @Input() games: Game[];
-
 }

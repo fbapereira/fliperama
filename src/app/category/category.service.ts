@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { MainService } from './main.service';
+import { MainService } from '../shared/main.service';
 
 export interface Category {
   id: string,

@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
-import { MainService } from '../shared/main.service';
-import { map, tap } from 'rxjs/operators';
 import { Observable } from 'rxjs';
-import { Category } from '../shared/category.service';
+import { map } from 'rxjs/operators';
+
+import { Category } from '../category/category.service';
+import { MainService } from '../shared/main.service';
 
 export class Game {
   categories: string[];
@@ -15,10 +16,9 @@ export class Game {
   providedIn: 'root'
 })
 export class GamesService {
+  games$: Observable<Game[]> = this.mainService.data$.pipe(map((games) => games as Game[]));
 
   constructor(private mainService: MainService) { }
-
-  games$: Observable<Game[]> = this.mainService.data$.pipe(map((games) => games as Game[]));
 
   getGamesByCategory(category: Category): Observable<Game[]> {
     return this.mainService.data$.pipe(

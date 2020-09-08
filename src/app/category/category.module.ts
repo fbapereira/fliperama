@@ -1,15 +1,17 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CategoryComponent } from './category.component';
-import { GameModule } from '../game/game.module';
-import { CategoryListComponent } from './category-list/category-list.component';
+import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+
+import { GameModule } from '../game/game.module';
+
+import { CategoryListComponent } from './category-list/category-list.component';
+import { CategoryComponent } from './category.component';
 
 @NgModule({
   declarations: [CategoryComponent, CategoryListComponent],
   exports: [CategoryComponent, CategoryListComponent],
   imports: [
-    CommonModule, 
+    CommonModule,
     GameModule,
     RouterModule,
   ]

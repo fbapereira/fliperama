@@ -4,11 +4,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MenuModule } from './menu/menu.module';
+import { GameModule } from './game/game.module'
 import { HomeModule } from './home/home.module';
-import {SharedModule } from './shared/shared.module';
-import {GameModule} from './game/game.module'
+import { MenuModule } from './menu/menu.module';
 import { SearchModule } from './search/search.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
