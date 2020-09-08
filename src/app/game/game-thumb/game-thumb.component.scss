@@ -1,26 +1,26 @@
 @import 'variables';
-  $thumb-shadow: 0px 10px 35px 0px rgba(0, 0, 0, .2);
 
-  .thumb {
-    box-shadow: $thumb-shadow;
-    overflow: hidden;
-    background: #251533;
-    border-color: $white;
+.thumb {
+  box-shadow: $thumb-shadow;
+  overflow: hidden;
+  background: $thumb-button-color;
+  border-color: $white;
+  height: 100%;
 
-
-    &-button {
-      background-color: #251533;
-      color: $white;
-      display: block;
-      width: 100%;
-      text-align: center;
-      height: 3rem;
-      line-height: 3rem;
-      text-decoration:none
-    }
-
-    img {
-      object-fit: cover;
-      width: 100%;
-    }
+  &-button {
+    background-color: $thumb-button-color;
+    color: $white;
+    display: block;
+    width: 100%;
+    text-align: center;
+    height: $thumb-info-height;
+    line-height: $thumb-info-height;
+    text-decoration: none;
+    cursor: pointer;
   }
+
+  img {
+    object-fit: cover;
+    width: 100%;
+  }
+}

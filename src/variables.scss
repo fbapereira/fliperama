@@ -1,5 +1,6 @@
 $primary: #965E98;
 $primary-contrast: #F4C258;
+$primary-dark: #251533;
 
 $black: #000;
 $white: #fff;
@@ -20,9 +21,14 @@ $font-small: 1rem;
     Header
 */
 $header-height: 3rem;
-$header-background: rgba(#000, .4);;
+$header-background: rgba($primary-dark, .4);;
 $header-title-color: $white;
 $header-title-size: $font-large;
 
-
+/*
+    Thumb
+*/
+$thumb-shadow: 0px 10px 35px 0px rgba(0, 0, 0, .2);
+$thumb-button-color: $primary-dark;
+$thumb-info-height: 3rem;
 
