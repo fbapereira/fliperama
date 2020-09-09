@@ -18,7 +18,7 @@ export class SearchComponent implements AfterViewInit {
   searchText$: Observable<any>;
   games$: Observable<Game[]>
 
-  public selectedCategoriesChanged = new BehaviorSubject<string[]>([]);
+  public selectedCategoriesChanged = new BehaviorSubject<Category[]>([]);
 
   categories$ = this.categoryService.categories$;
   selectedCategories = [];
@@ -51,16 +51,17 @@ export class SearchComponent implements AfterViewInit {
             selectedGames = selectedGames.filter((game: Game) => (game.name.toUpperCase().indexOf(searchText) > -1));
           }
 
-          // if (selectedCategories.length > 0) {
-          //   selectedGames = selectedGames.filter((game: Game) => game.categories.forEach((category) => {
-          //     let a = selectedCategories.indexOf((selectedCategories) => selectedCategories.id === category) > -1;
-          //      return a;
-          //   }));
-          // }
-
+          if (selectedCategories.length > 0) {
+            selectedGames = selectedGames.filter((game) => {
+              return game.categories.some((gameCategory: string) => {
+                return selectedCategories.some((selectedCategory: Category) => {
+                  if (gameCategory === selectedCategory.id) return true;
+                });
+              });
+            });
+          }
           return selectedGames;
         }),
-          // return  games.filter((x) => categories.length === 0 || categories.includes(x.categories[0]))
       );
   }
 
