@@ -3,7 +3,7 @@
   <input type="text" placeholder="search" #searchInput autocomplete="off"/>
   <div>
     <span
-      (click)="select(category)"
+      (click)="changeSelectedCategories(category)"
       class="category"
       [ngClass]="'category-' + ((i % 7) + 2)"
       [class.selected]="selectedCategories.includes(category)"
@@ -12,5 +12,5 @@
       <span class="close">x</span>
     </span>
   </div>
-  <app-game-lobby [games]="games$ | async"></app-game-lobby>
+  <app-game-lobby [games]="filteredGames$ | async"></app-game-lobby>
 </div>

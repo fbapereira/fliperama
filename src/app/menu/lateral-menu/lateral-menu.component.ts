@@ -14,49 +14,50 @@ import { Category } from '../../category/category.service';
         'left': '-14.7rem'
       })),
       state('show', style({
-        'left': '0px'
+        'left': '0'
       })),
       transition('show <=> hide', animate('300ms ease-in')),
     ]),
   ]
 })
 export class LateralMenuComponent {
-   /**
-    * categories to became menu
-    */
+  /*
+   * categories to became menu
+   */
   @Input()
   categories: Category[];
 
-   /**
+  /**
    * current status
    */
-   state = 'hide';
+  state = 'hide';
 
-   constructor(private router: Router) {}
-   /**
-    * navigate to category
-    * @param category target category
-    */
-   navigateTo(category: Category): void {
-     // case menu close, and user click on it, just open the menu without navigate
-     if (this.state === 'hide') {
-       this.changeMenuStatus();
-       return;
-     }
+  constructor(private router: Router) {}
+  /**
+   * navigate to category
+   * @param category target category
+   */
+  navigateTo(category: Category): void {
+    // case menu close, and user click on it, just open the menu without navigate
+    if (this.state === 'hide') {
+      this.changeMenuStatus();
+      return;
+    }
 
-     if (category) {
-       this.router.navigate(['/category'], { queryParams: { category: category.id } });
-     } else {
-       this.router.navigate(['/']);
-     }
+    // If not category send the player to home
+    if (category) {
+      this.router.navigate(['/category'], { queryParams: { category: category.id } });
+    } else {
+      this.router.navigate(['/']);
+    }
 
-     this.changeMenuStatus();
-   }
+    this.changeMenuStatus();
+  }
 
-   /**
-    * change menu status OPEN/CLOSE
-    */
-   changeMenuStatus(): void {
-     this.state = (this.state === 'show' ? 'hide' : 'show');
-   }
+  /**
+  * change menu status OPEN/CLOSE
+  */
+  changeMenuStatus(): void {
+    this.state = (this.state === 'show' ? 'hide' : 'show');
+  }
 }

@@ -15,7 +15,6 @@ export class GameComponent {
   game$: Observable<Game> = this.activatedRoute.queryParams.pipe(
     map((params) => params['game']),
     switchMap((gameId: string) => {
-      debugger;
       return this.gameService.games$.pipe(
         map((games: Game[]) => games.find((game: Game) => game.id === gameId)),
       );

@@ -1,6 +1,10 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { async, ComponentFixture, TestBed, inject } from '@angular/core/testing';
+import { ActivatedRoute } from '@angular/router';
+import { of } from 'rxjs';
 
 import { GameComponent } from './game.component';
+import { GamesService } from './games.service';
 
 describe('GameComponent', () => {
   let component: GameComponent;
@@ -8,7 +12,22 @@ describe('GameComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GameComponent ]
+      schemas: [ NO_ERRORS_SCHEMA ],
+      declarations: [ GameComponent ],
+      providers: [
+        {
+          provide: ActivatedRoute,
+          useValue: {
+            queryParams: of(),
+          },
+        },
+        {
+          provide: GamesService,
+          providers: {
+            games$: of()
+          }
+        }
+      ],
     })
     .compileComponents();
   }));
