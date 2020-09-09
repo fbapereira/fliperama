@@ -1,11 +1,14 @@
-<div [@animationInOut]='state' *ngIf="categories" class="scene">
+<div [@animationInOut]='state' *ngIf="categories" class="scene" data-e2e="lateral-menu">
   <div class="square-1" (click)="navigateTo()">
     <div>
       <span> Home
       </span>
     </div>
   </div>
-  <div *ngFor="let category of categories; let i = index" [ngClass]="'square-' + ((i % 7) + 2)" (click)="navigateTo(category)">
+  <div
+    *ngFor="let category of categories; let i = index"
+    [ngClass]="'square-' + ((i % 7) + 2)"
+    (click)="navigateTo(category)">
     <div>
       <span> {{ category.title }}
       </span>

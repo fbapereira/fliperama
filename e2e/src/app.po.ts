@@ -1,4 +1,4 @@
-import { browser, by, element } from 'protractor';
+import { browser, by, element, By } from 'protractor';
 
 export class AppPage {
   navigateTo(): Promise<unknown> {
@@ -6,6 +6,22 @@ export class AppPage {
   }
 
   getTitleText(): Promise<string> {
-    return element(by.css('app-root .content span')).getText() as Promise<string>;
+    return element(by.css('app-root .home-banner-content h1')).getText() as Promise<string>;
+  }
+
+  getMenuButton() {
+    return element(by.css('[data-e2e="menu-button"]'));
+  }
+
+  getSearchButton() {
+    return element(by.css('[data-e2e="search-button"]'));
+  }
+
+  getLateralMenu() {
+    return element(by.css('[data-e2e="lateral-menu"]'));
+  }
+
+  getLateralItemMenu() {
+    return element(by.css('[data-e2e="lateral-menu-item-1"]'));
   }
 }
