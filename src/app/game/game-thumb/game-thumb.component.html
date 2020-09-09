@@ -1,7 +1,7 @@
 <div
   *ngIf="game"
   class="thumb fade-enter">
-  <img [src]='game.icon_2'/>
+  <img [src]='game.icon_2' alt="game picture"/>
   <a
     [routerLink]="['/game']"
     [queryParams]="{game: game.id}"
