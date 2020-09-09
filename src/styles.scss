@@ -1,21 +1,18 @@
 @import 'variables';
 
 body {
-  margin: 0;
-  font-family: "Roboto";
-  font-weight: 400;
   background-color: #3f3952;
+  font-family: 'Roboto';
+  font-weight: 400;
+  margin: 0;
 }
 
-/*
-fade
-*/
+// fade
 .fade-enter,
 .fade {
-
   -webkit-animation-duration: 1.5s;
-  animation-duration: 1.5s;
   -webkit-animation-fill-mode: both;
+  animation-duration: 1.5s;
   animation-fill-mode: both;
 }
 
@@ -32,14 +29,14 @@ fade
 
 @-webkit-keyframes fade {
   from {
-    opacity: 0;
     -webkit-transform: translate3d(20px, 0, 0);
+    opacity: 0;
     transform: translate3d(20px, 0, 0);
   }
 
   to {
-    opacity: 1;
     -webkit-transform: translate3d(0, 0, 0);
+    opacity: 1;
     transform: translate3d(0, 0, 0);
   }
 }
@@ -58,14 +55,14 @@ fade
 
 @-webkit-keyframes fadeRight {
   from {
-    opacity: 0;
     -webkit-transform: translate3d(0, 0, 0);
+    opacity: 0;
     transform: translate3d(0, 0, 0);
   }
 
   to {
-    opacity: 1;
     -webkit-transform: translate3d(0, 0, 0);
+    opacity: 1;
     transform: translate3d(0, 0, 0);
   }
 }
@@ -73,14 +70,14 @@ fade
 
 @keyframes fadeRight {
   from {
-    opacity: 0;
     -webkit-transform: translate3d(20px, 0, 0);
+    opacity: 0;
     transform: translate3d(20px, 0, 0);
   }
 
   to {
-    opacity: 1;
     -webkit-transform: translate3d(0, 0, 0);
+    opacity: 1;
     transform: translate3d(0, 0, 0);
   }
 }

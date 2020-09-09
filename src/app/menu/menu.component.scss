@@ -1,23 +1,23 @@
 @import 'variables';
 
 .nav-bar {
-  height: $header-height;
   background: $header-background;
   display: flex;
   flex-direction: row;
+  height: $header-height;
   justify-content: space-between;
-  width:100%;
-  position: fixed;
-  top: 0;
-  right: 0;
   left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
   z-index: 100;
 
   .menu,
   .profile {
+    color: $header-title-color;
     font-size: $header-height - 1rem;
     margin: .5rem;
-    color: $header-title-color;
   }
 }
 

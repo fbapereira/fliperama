@@ -1,34 +1,26 @@
-$primary: #965E98;
-$primary-contrast: #F4C258;
+// Colors
+$primary: #965e98;
+$primary-contrast: #f4c258;
 $primary-dark: #251533;
-
 $black: #000;
 $white: #fff;
+$gray: #f5f5f5;
+$all-palette-colors: #5d7ea4, #965e98, #f79c91, #b0d66d, #f4c258, #71a7d6, #d671a7, #71d6a0;
 
-/*
-    Lateral menu
-*/
+// Lateral menu
 $item-height: 3rem;
-$lateral-menu-colors: #5D7EA4, #965E98, #F79C91, #B0D66D, #F4C258, #71A7D6, #D671A7, #71D6A0, #5D7EA4, #965E98, #F79C91, #B0D66D, #F4C258, #71A7D6, #D671A7, #71D6A0;
 
-/*
-    Typography
-*/
+// Typography
 $font-large: 2rem;
 $font-small: 1rem;
 
-/*
-    Header
-*/
+// Header
 $header-height: 3rem;
 $header-background: rgba($primary-dark, .4);;
 $header-title-color: $white;
 $header-title-size: $font-large;
 
-/*
-    Thumb
-*/
-$thumb-shadow: 0px 10px 35px 0px rgba(0, 0, 0, .2);
+// Thumb
+$thumb-shadow: 0 10px 35px 0 rgba(0, 0, 0, .2);
 $thumb-button-color: $primary-dark;
 $thumb-info-height: 3rem;
-

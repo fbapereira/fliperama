@@ -1,70 +1,67 @@
 @import 'variables';
 
-
-input[type=text], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
+input {
+  border: 1px solid $gray;
   border-radius: 4px;
   box-sizing: border-box;
+  display: inline-block;
+  margin: 8px 0;
+  padding: 12px 20px;
+  width: 100%;
 }
 
 .container {
-  width: 90%;
   margin: auto;
+  width: 90%;
 }
 
 .category {
-  background-color: #ddd;
-  border: none;
-  color: black;
+  border: 0;
+  border-radius: 16px;
+  color: $black;
+  cursor: pointer;
+  display: inline-block;
+  margin: 4px 2px;
   padding: 10px 20px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 16px;
 }
 
-@for $i from 1 through length($lateral-menu-colors) {
-    .category-#{$i} {
-      background: nth($lateral-menu-colors, $i);
-      vertical-align: middle;
-      padding: 10px 20px;
-      color: whitesmoke;
-      text-align: center;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      margin: .5rem;
-      cursor: pointer;
+@for $i from 1 through length($all-palette-colors) {
+  .category-#{$i} {
+    background: nth($all-palette-colors, $i);
+    color: $gray;
+    cursor: pointer;
+    display: inline-block;
+    margin: .5rem;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
 
-      &.selected {
-        background: darken(nth($lateral-menu-colors, $i), 40%);
-        .close {
-          margin-left: .5rem;
-          display: inherit;
-        }
-      }
+    &.selected {
+      background: darken(nth($all-palette-colors, $i), 40%);
 
       .close {
-        display: none;
+        display: inherit;
+        margin-left: .5rem;
       }
     }
-  }
 
+    .close {
+      display: none;
+    }
+  }
+}
 
 .banner {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: inherit;
-    display: flex;
-    align-items: center;
-    background-image: url("/assets/images/banner.jpg");
-    height: 20vh;
+  align-items: center;
+  background-attachment: fixed;
+  background-image: url('/assets/images/banner.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  height: 20vh;
+  opacity: inherit;
 }

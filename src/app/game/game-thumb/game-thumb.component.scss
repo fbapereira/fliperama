@@ -1,22 +1,22 @@
 @import 'variables';
 
 .thumb {
-  box-shadow: $thumb-shadow;
-  overflow: hidden;
   background: $thumb-button-color;
   border-color: $white;
+  box-shadow: $thumb-shadow;
   height: 100%;
+  overflow: hidden;
 
   &-button {
     background-color: $thumb-button-color;
     color: $white;
+    cursor: pointer;
     display: block;
-    width: 100%;
-    text-align: center;
     height: $thumb-info-height;
     line-height: $thumb-info-height;
+    text-align: center;
     text-decoration: none;
-    cursor: pointer;
+    width: 100%;
   }
 
   img {

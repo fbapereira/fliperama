@@ -5,7 +5,7 @@
       </span>
     </div>
   </div>
-  <div *ngFor="let category of categories; let i = index" [ngClass]="'square-'+ (i+ 2)" (click)="navigateTo(category)">
+  <div *ngFor="let category of categories; let i = index" [ngClass]="'square-' + ((i % 7) + 2)" (click)="navigateTo(category)">
     <div>
       <span> {{ category.title }}
       </span>

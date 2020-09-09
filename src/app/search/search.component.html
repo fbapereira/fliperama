@@ -5,7 +5,7 @@
     <span
       (click)="select(category)"
       class="category"
-      [ngClass]="'category-'+ (i+ 2)"
+      [ngClass]="'category-' + ((i % 7) + 2)"
       [class.selected]="selectedCategories.includes(category)"
       *ngFor="let category of categories$ | async; let i = index"
     >{{ category.title }}

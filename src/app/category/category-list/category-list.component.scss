@@ -1,12 +1,12 @@
-
 @import 'variables';
+
 :host {
   width: 100%;
 }
 
 .home-lobby {
-  width: 90%;
   margin: 2rem auto;
+  width: 90%;
 
   .title {
     color: $white;
@@ -14,8 +14,8 @@
     margin-bottom: 1rem;
 
     .link {
-      font-size: $font-small;
       color: $primary-contrast;
+      font-size: $font-small;
     }
   }
 }
