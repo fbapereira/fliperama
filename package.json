@@ -8,7 +8,11 @@
     "test": "ng test  --watch=true",
     "lint": "ng lint",
     "lint:sass": "sass-lint -q -v",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "dev:ssr": "ng run fliperama:serve-ssr",
+    "serve:ssr": "node dist/fliperama/server/main.js",
+    "build:ssr": "ng build --prod && ng run fliperama:server:production",
+    "prerender": "ng run fliperama:prerender"
   },
   "private": true,
   "dependencies": {
@@ -19,7 +23,10 @@
     "@angular/forms": "~10.0.14",
     "@angular/platform-browser": "~10.0.14",
     "@angular/platform-browser-dynamic": "~10.0.14",
+    "@angular/platform-server": "~10.0.14",
     "@angular/router": "~10.0.14",
+    "@nguniversal/express-engine": "^10.0.2",
+    "express": "^4.15.2",
     "rxjs": "~6.5.5",
     "rxjs-tslint": "^0.1.8",
     "sass-lint": "^1.13.1",
@@ -31,6 +38,8 @@
     "@angular-devkit/build-angular": "~0.1000.8",
     "@angular/cli": "~10.0.8",
     "@angular/compiler-cli": "~10.0.14",
+    "@nguniversal/builders": "^10.0.2",
+    "@types/express": "^4.17.0",
     "@types/node": "^12.11.1",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",

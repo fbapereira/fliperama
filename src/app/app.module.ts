@@ -16,7 +16,7 @@ import { SharedModule } from './shared/shared.module';
   ],
   imports: [
     AppRoutingModule,
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     SharedModule,
     BrowserAnimationsModule,
     MenuModule,
